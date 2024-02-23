@@ -1,4 +1,4 @@
-import { Box, HStack, Icon, StackProps, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Icon, StackProps, Text } from "@chakra-ui/react";
 import { Home } from "../icons/Icon";
 import { ElementType } from "react";
 
@@ -21,19 +21,17 @@ export const Feature = (props: FeatureProps) => {
 const Features = () => {
   return (
     <Box maxW="1024px" m="auto" pt="60px" pb="8">
-      <HStack px="12" spacing="5">
+      <Flex px="12" gap="5" direction={["column", "column", "row"]}>
         <Feature icon={() => <Home color="#EF4823" />}>
           Lorem ipsum dolor sit amet.
         </Feature>
         <Feature icon={() => <Home color="#ae4789" />}>
-          {" "}
           Lorem ipsum dolor sit amet.
         </Feature>
         <Feature icon={() => <Home color="#aa9823" />}>
-          {" "}
           Lorem ipsum dolor sit amet.
         </Feature>
-      </HStack>
+      </Flex>
     </Box>
   );
 };
