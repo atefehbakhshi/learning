@@ -1,5 +1,5 @@
 import { Box, HStack, Icon, StackProps, Text } from "@chakra-ui/react";
-import { CheckIcon, Home } from "../icons/Icon";
+import { Home } from "../icons/Icon";
 import { ElementType } from "react";
 
 interface FeatureProps extends StackProps {
@@ -9,9 +9,9 @@ interface FeatureProps extends StackProps {
 export const Feature = (props: FeatureProps) => {
   const { icon, children, ...rest } = props;
   return (
-    <HStack as="li" spacing="24px" {...rest}>
-      <Icon as={icon} boxSize="48px" />
-      <Text textAlign="left" fontSize="18px" fontWeight="700">
+    <HStack as="li" spacing="6" {...rest}>
+      <Icon as={icon} boxSize="12" />
+      <Text textAlign="left" fontSize="lg" fontWeight="bold">
         {children}
       </Text>
     </HStack>
@@ -20,8 +20,8 @@ export const Feature = (props: FeatureProps) => {
 
 const Features = () => {
   return (
-    <Box maxW="1024px" m="auto" pt="60px" pb="32px">
-      <HStack px="48px" spacing="20px">
+    <Box maxW="1024px" m="auto" pt="60px" pb="8">
+      <HStack px="12" spacing="5">
         <Feature icon={() => <Home color="#EF4823" />}>
           Lorem ipsum dolor sit amet.
         </Feature>
